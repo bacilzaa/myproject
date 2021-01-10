@@ -1,0 +1,36 @@
+<app-login-form></app-login-form>
+
+<img class="wave" src="../../assets/image/abstract-waves-png-2.png">
+<div class="container">
+  <div class="img">
+    <img src="../../assets/image/expensez_logo.svg">
+    <h2>What is Expensez?</h2>
+  </div>
+  <div class="login-content">
+    <div class="form">
+      <img src="../../assets/image/undraw_profile_6l1l.svg">
+      <h2 class="title">Join us</h2>
+      <div class="input-div one">
+        <div class="i">
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="div">
+          <input type="text" name="user" class="input" placeholder="Username" required [(ngModel)]="username"
+            #userCon="ngModel">
+        </div>
+      </div>
+      <div class="input-div pass">
+        <div class="i">
+          <i class="fas fa-lock"></i>
+        </div>
+        <div class="div">
+          <input type="password" name="pass" class="input" placeholder="password" required [(ngModel)]="password"
+            #passCon="ngModel">
+        </div>
+      </div>
+      <a routerLink="/login">Already Account?</a>
+      <input type="submit" [ngClass]="{'btn':true,'disable':passCon.errors||userCon.errors}"
+        [disabled]="passCon.errors||userCon.errors" value="Sign up" (click)="register()">
+    </div>
+  </div>
+</div>

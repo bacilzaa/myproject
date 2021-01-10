@@ -1,0 +1,26 @@
+<app-dashboard></app-dashboard>
+
+<main>
+    <div class="container jumbotron " style="margin-top: 1%;float: left;margin-left: 3%;">
+        <div class="form-group">
+            <div class="form-group form-inline">
+                <b style="margin-right: 1%">Choose Category</b>
+                <select #selectcate class="form-control" [ngModel]="selectCate" (ngModelChange)="select($event)">
+                    <option *ngFor="let category of categoryAll" [ngStyle]="{background:category.color}" [disabled]="category.name_category == 'All'"
+                        [value]="category.id">{{category.name_category}}</option>
+                </select>
+            </div>
+            <div class="form-group form-check-inline">
+                <input type="text" placeholder="Category Name" [(ngModel)]="name" class="form-control" required
+                    #addControl="ngModel" [ngStyle]="{'background-color':rgbcolor}">
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="color" [(ngModel)]="color" (change)="console_color()">
+            </div>
+            <div>
+                <button (click)="newCategory()" class="btn btn-success" style="margin-top: 1%"
+                    [disabled]="addControl.errors||!checkcolor()||!(name != 'All')">Add Category</button>
+            </div>
+        </div>
+    </div>
+</main>

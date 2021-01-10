@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title> LOGIN </title>
+  <link rel="stylesheet" type="text/css" href="loginstyle.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.css">
+  <script type="text/javascript">
+    $(".txtb input").on("focus", function () {
+      $(this).addClass("focus");
+    });
+
+    $(".txtb input").on("blur", function () {
+      if ($(this).val() == "")
+        $(this).removeClass("focus");
+    });
+  </script>
+</head>
+
+<body>
+    <div class="bubbels">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+      </div>
+  
+    <div class="header">
+
+        
+        <input type="checkbox" id="chk">
+        
+        
+        <label for="chk" class="show-menu-btn">
+  
+          <i class="fas fa-ellipsis-h"></i>
+  
+        </label>
+  
+        <ul class="menu">
+  
+          <a href="browse.html">Browse</a>|
+          <a href="register.html">Register</a>|
+          <a href="mailto: worawit.naknawa@g.swu.ac.th">Contact</a>
+          <label for="chk" class="hide-menu-btn">
+            <i class="fas fa-times"></i>
+          </label>
+        </ul>
+  
+      </div>
+      
+    
+
+  <form name="frmlogin" method="post" action="checklogin.php" class="login-form">
+    <h1>Login</h1>
+
+    <div class="txtb">
+      <input type="text" id="Username" required name="user" placeholder="Username" autofocus>
+    </div>
+    <div class="txtb">
+      <input type="password" id="Password" required name="pass" placeholder="Password">
+
+    </div>
+    <div class="row">
+      <input type="submit" class="logbtn col-sm" value="login" style="margin-right: 3% ;">
+      <button type="reset" class="logbtn col-sm">Reset</button>
+    </div>
+    <div class="bottom-text">
+      Don't have account? <a href="register.html">Sign up here!</a>
+    </div>
+
+  </form>
+
+
+  <footer id="sticky-footer" class="py-4 bg-red text-white-50 fixed-bottom">
+
+    <div class="d-flex justify-content-center">
+      <div class="px-3">Copyright &copy;JMP Review </div>
+      <div class="px-3"> Powered By W3.CSS </div>
+      <div class="px-3"> Follow Us </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <a class="btn1" href="#">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a class="btn1" href="#">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a class="btn1" href="#">
+        <i class="fab fa-google"></i>
+      </a>
+      <a class="btn1" href="#">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a class="btn1" href="#">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+
+    </div>
+    
+  </footer>
+  
+  
+</body>
+
+</html>

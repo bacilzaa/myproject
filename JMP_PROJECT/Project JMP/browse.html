@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>JMP || BROWSE </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+<!-------------------------------------------------------------------------------------CDN------------------------------------------------------------------------------------------->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!-------------------------------------------------------------------------------------Extanal CSS---------------------------------------------------------------------------------->
+  <link rel="stylesheet" type="text/css" href="browsestyle.css">
+  <link href="assets/owl.carousel.min.css" rel="stylesheet" />
+  <link href="assets/owl.theme.default.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="search.css">
+
+</head>
+
+<body>
+<!------------------------------------------------------------------------------------- Bubble -------------------------------------------------------------------------------------->
+<div class="bubbels">
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+</div>
+
+<!------------------------------------------------------------------------------------- Navbar ------------------------------------------------------------------------------------>
+
+<nav class="navbar navbar-expand-lg " >
+  <a class="navbar-brand logo " href="index.html">JMP Review</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTop" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon logo"><i class="fa fa-bars" aria-hidden="true"></i></span>
+      </button>
+  
+  <div class="collapse navbar-collapse " id="navbarTop"> 
+    <ul class="navbar-nav mr-auto">
+    </ul>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link big" data-toggle="tooltip" title="Search" id="Box-Search">
+              <button class="btn btn2"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </a>
+          </li>
+      <li class="nav-item">
+        <a class="nav-link big" data-toggle="tooltip" id="link1">
+          <button class="btn btn2" id="button1"></button>
+        </a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link big" data-toggle="tooltip" id="link2">
+          <button class="btn btn2" id="button2"></button>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!----------------------------------------------------------------------------------------Model DIV------------------------------------------------------------------------------------->
+
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="input-group med">
+        <input class="form-control form-control-lg border-0 bg-white med" id="Search" type="text" placeholder="Search">
+        <div class="input-group-append close">
+            <span class="input-group-text close"><i class="fa fa-times" aria-hidden="true"></i></span>
+        </div>
+    </div>
+          <div id="t"></div>
+  </div>
+
+<!--------------------------------------------------------------------------------------- Slide show ------------------------------------------------------------------------------------>
+
+
+<div id= "genre" >
+    <div class="container my-5 " id = "rec">
+        <div class="card">
+          <h4 class="card-header">Recommend</h4>
+          <div class="card-body owl-carousel owl-theme" id="Recommend">
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-5 " id = "ac">
+    <div class="card">
+      <h4 class="card-header">Action</h4>
+      <div class="card-body owl-carousel owl-theme" id="Action">
+      </div>
+    </div>
+    </div>
+
+    <div class="container my-5 " id ="ad">
+        <div class="card">
+        <h4 class="card-header">Adventure</h4>
+        <div class="card-body owl-carousel owl-theme" id="Adventure">
+        </div>
+        </div>
+    </div>
+
+    <div class="container my-5 " id ="an">
+        <div class="card">
+        <h4 class="card-header">Animation</h4>
+        <div class="card-body owl-carousel owl-theme" id="Animetion">
+        </div>
+        </div>
+    </div>
+
+    <div class="container my-5 " id ="co">
+        <div class="card">
+        <h4 class="card-header">Comedy</h4>
+        <div class="card-body owl-carousel owl-theme" id="Comedy">
+        </div>
+        </div>
+    </div>
+
+    <div class="container my-5 " id ="cr">
+        <div class="card">
+        <h4 class="card-header">Crime</h4>
+        <div class="card-body owl-carousel owl-theme" id="Crime">
+        </div>
+        </div>
+    </div>
+
+    <div class="container my-5 " id ="do">
+        <div class="card">
+        <h4 class="card-header">Documentary</h4>
+        <div class="card-body owl-carousel owl-theme" id="Doc">
+        </div>
+        </div>
+    </div>
+
+    <div class="container my-5 " id="dr">
+        <div class="card">
+        <h4 class="card-header">Drama</h4>
+        <div class="card-body owl-carousel owl-theme" id="Drama">
+        </div>
+        </div>
+    </div>
+
+    <div class="container my-5 " id ="fam">
+        <div class="card">
+        <h4 class="card-header">Family</h4>
+        <div class="card-body owl-carousel owl-theme" id="Fam">
+        </div>
+        </div>
+    </div>
+
+    <div class="container my-5 " id ="fan">
+        <div class="card">
+        <h4 class="card-header">Fantasy</h4>
+        <div class="card-body owl-carousel owl-theme" id="Fantasy">
+        </div>
+        </div>
+    </div>
+
+    <div class="container my-5 " id="hi">
+        <div class="card">
+        <h4 class="card-header">History</h4>
+        <div class="card-body owl-carousel owl-theme" id="his">
+        </div>
+        </div>
+    </div>
+
+    <div class="container my-5 " id="ho">
+        <div class="card">
+        <h4 class="card-header">Horror</h4>
+        <div class="card-body owl-carousel owl-theme" id="hor">
+        </div>
+        </div>
+    </div>
+
+    <div class="container my-5 " id="mu">
+        <div class="card">
+        <h4 class="card-header">Music</h4>
+        <div class="card-body owl-carousel owl-theme" id="music">
+        </div>
+        </div>
+    </div>
+
+    <div class="container my-5 " id="mys">
+        <div class="card">
+        <h4 class="card-header">Mystery</h4>
+        <div class="card-body owl-carousel owl-theme" id="mystery">
+        </div>
+        </div>
+    </div>
+
+    <div class="container my-5 " id="ro">
+        <div class="card">
+        <h4 class="card-header">Romance</h4>
+        <div class="card-body owl-carousel owl-theme" id="romance">
+        </div>
+        </div>
+    </div>
+
+    <div class="container my-5 " id="sc">
+        <div class="card">
+        <h4 class="card-header">Science Fiction</h4>
+        <div class="card-body owl-carousel owl-theme" id="sf">
+        </div>
+        </div>
+    </div>
+
+    <div class="container my-5 " id="tm">
+        <div class="card">
+        <h4 class="card-header">TV Movie</h4>
+        <div class="card-body owl-carousel owl-theme" id="tv">
+        </div>
+        </div>
+    </div>
+
+    <div class="container my-5 " id="th">
+        <div class="card">
+        <h4 class="card-header">Thriller</h4>
+        <div class="card-body owl-carousel owl-theme" id="thril">
+        </div>
+        </div>
+    </div>
+
+    <div class="container my-5 " id="wa">
+        <div class="card">
+        <h4 class="card-header">War</h4>
+        <div class="card-body owl-carousel owl-theme" id="war">
+        </div>
+        </div>
+    </div>
+
+
+    <div class="container my-5 " id="we">
+        <div class="card">
+        <h4 class="card-header">Western</h4>
+        <div class="card-body owl-carousel owl-theme" id="west">
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+<!------------------------------------------------------------------------------------- Footer -------------------------------------------------------------------------------------->
+<footer id="footer" class="py-4 bg-red text-white-50 ">
+
+  <div class="d-flex justify-content-center">
+    <div class="px-3">Copyright &copy;JMP Review </div>
+    <div class="px-3"> Powered By W3.CSS </div>
+    <div class="px-3"> Follow Us </div>
+  </div>
+  <div class="d-flex justify-content-center">
+    <a class="btn1" href="#">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a class="btn1" href="#">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a class="btn1" href="#">
+      <i class="fab fa-google"></i>
+    </a>
+    <a class="btn1" href="#">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a class="btn1" href="#">
+      <i class="fab fa-youtube"></i>
+    </a>
+  </div>
+
+  </div>
+</footer>
+
+</body>
+
+</html>
+
+<!-------------------------------------------------------------------------------------Extanal Script---------------------------------------------------------------------------------->
+<script src="checklogin.js"></script>
+<script src="Randomgenre.js"></script>-->
+<script src="owl.carousel.min.js"></script>
+<script src="search.js"></script>
+<script src="etc.js"></script>
+<script src="Recommend.js"></script>
+

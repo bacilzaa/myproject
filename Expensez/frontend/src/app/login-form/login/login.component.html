@@ -1,0 +1,38 @@
+<app-login-form></app-login-form>
+
+<img class="wave" src="../../assets/image/abstract-waves-png-2.png">
+<div class="container">
+  <div class="img">
+    <img src="../../assets/image/expensez_logo.svg">
+    <h2>What is Expensez?</h2>
+  </div>
+  <div class="login-content">
+    <div class="form">
+      <img src="../../assets/image/undraw_profile_pic_ic5t.svg">
+      <h2 class="title">Welcome</h2>
+      <div class="input-div one">
+        <div class="i">
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="div">
+          <input type="text" class="input" placeholder="Username" [(ngModel)]="username" required #user="ngModel">
+        </div>
+      </div>
+      <div class="input-div pass">
+        <div class="i">
+          <i class="fas fa-lock"></i>
+        </div>
+        <div class="div">
+          <input type="password" class="input" placeholder="password" [(ngModel)]="password" required #pass="ngModel">
+        </div>
+      </div>
+      <a routerLink="/register">Not have Account?</a>
+      <input [ngClass]="{'btn':true,'disable':user.errors||pass.errors}" [disabled]="user.errors||pass.errors" type="submit" value="sign in" (click)="login()">
+      <button class="loginBtn--google btn" #loginRef >
+        <i class="fa fa-google" aria-hidden="true"></i>
+        | singin with Google
+      </button>
+    </div>
+  
+  </div>
+</div>

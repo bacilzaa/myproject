@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head><title> REGISTER </title>
+<link rel="stylesheet" type="text/css" href="loginstyle.css">
+<script src="bootstrap.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.css">
+<script type="text/javascript">
+    $(".txtb input").on("focus",function(){
+      $(this).addClass("focus");
+    });
+
+    $(".txtb input").on("blur",function(){
+      if($(this).val() == "")
+      $(this).removeClass("focus");
+    });
+
+</script>
+
+</head>
+
+<body>
+    <div class="bubbels">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </div>
+
+  <div class="header">
+
+        
+      <input type="checkbox" id="chk">
+      
+      
+      <label for="chk" class="show-menu-btn">
+
+        <i class="fas fa-ellipsis-h"></i>
+
+      </label>
+
+      <ul class="menu">
+
+        <a href="browse.html">Browse</a>|
+        <a href="login.html">Login</a>|
+        <a href="mailto: worawit.naknawa@g.swu.ac.th">Contact</a>
+        <label for="chk" class="hide-menu-btn">
+          <i class="fas fa-times"></i>
+        </label>
+      </ul>
+
+    </div>
+
+     <form name="formRegis" action="registersave.php" method="post" class="login-form" onsubmit="return validform()">
+         <h1>Register</h1>
+
+         <div class="txtb">
+                <input type="email"  id="Email"  name="Email" placeholder="Email" autofocus >
+        </div>
+        <div class="txtb">
+            <input type="text" id="Username" name="Username" placeholder="Username" >
+    </div>
+        <div class="txtb">
+            <input type="password" id="Password" name="Password" placeholder="Password" >
+    </div>
+
+    <input type="submit" class ="logbtn" value="Sign UP">
+</form>
+
+    
+<footer id="sticky-footer" class="py-4 bg-red text-white-50 fixed-bottom">
+
+    <div class="d-flex justify-content-center">
+      <div class="px-3">Copyright &copy;JMP Review </div>
+      <div class="px-3"> Powered By W3.CSS </div>
+      <div class="px-3"> Follow Us </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <a class="btn1" href="#">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a class="btn1" href="#">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a class="btn1" href="#">
+        <i class="fab fa-google"></i>
+      </a>
+      <a class="btn1" href="#">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a class="btn1" href="#">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+
+    </div>
+    
+  </footer>
+</body>
+  <script>
+    function validform(){
+      var x = document.forms["formRegis"]["Firstname"].value;
+      var y = document.forms["formRegis"]["Lastname"].value;
+      var z = document.forms["formRegis"]["Username"].value;
+      var s = document.forms["formRegis"]["Password"].value;
+      if ( x == null || x == "" ) {
+      alert("Firstname must be filled out");
+      return false;
+      }
+      if ( y == null || y == "" ) {
+      alert("Lastname must be filled out");
+      return false;
+      }
+      if ( z == null || z == "" ) {
+      alert("Username must be filled out");
+      return false;
+      }
+      if ( s == null || s == "" ) {
+      alert("Password must be filled out");
+      return false;
+      }
+
+
+}
+  </script>
+</html>

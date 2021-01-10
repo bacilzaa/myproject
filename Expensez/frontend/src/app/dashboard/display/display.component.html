@@ -1,0 +1,68 @@
+<app-dashboard></app-dashboard>
+<main>
+
+    <div class="container jumbotron " style="margin-top: 1%;float: left;margin-left: 3%">
+        <div class="form-group form-inline">
+            <b style="margin-right: 1%">Choose Category </b>
+            <select #selectcate class="form-control" [ngModel]="selectCate" (ngModelChange)="select($event)">
+                <option *ngFor="let category of categoryAll" [ngStyle]="{'background-color':category.color}"
+                    [value]="category.id">{{category.name_category}}</option>
+            </select>
+            <button [ngStyle]="!(selectCate != 0)?{'display':'none'}:{'display':'block'}"><i
+                    class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+            <button [ngStyle]="!(selectCate != 0)?{'display':'none'}:{'display':'block'}"><i class="fa fa-times"
+                    aria-hidden="true"></i></button>
+        </div>
+        <div *ngIf="!dataStatus">
+            <h2>this category don't have data</h2>
+            <a routerLink="/expense">Would you like to add data?</a>
+        </div>
+        <div id="chartContainer" [ngStyle]="dataStatus?{'display':'block'}:{'display':'none'}" style="height: 370px; width: 100%; margin-left:auto;margin-right:auto; " ></div>
+        <div *ngIf="dataStatus">
+
+
+            
+            <div>
+                <table class="table table-striped ">
+
+                    <tr style="background-color:steelblue;color: honeydew;">
+                        <th style="text-align: left;" class="hide">SOME OF Category</th>
+                        <td style="text-align:right ;" class="show" data-label="คงเหลือ">{{expense_sum|currency:'฿'}}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <table class="table table-striped ">
+                <thead class="thead-dark">
+                    <tr>
+                        <th style="width: 20px;">ประเภท</th>
+                        <th style="width: 1500px;">รายละเอียด</th>
+                        <th style="width: 200px;">จำนวนเงิน</th>
+                        <th style="width: 300px;">สร้างวันที่</th>
+                        <th style="width: 200px;">อัพเดทวันที่</th>
+                        <th style="width: 200px;">ตั้งค่า</th>
+                    </tr>
+                </thead>
+                <tr *ngFor='let db of expensez_data let i = index;' [ngStyle]="{'background-color':db.color}">
+
+                    <td id="toggle{{i}}" data-label="ประเภท" [ngClass]="check(i)" (click)="clickEvent(i)">
+                        {{db.name_category}}</td>
+                    <td id="toggle{{i}}" class="show" data-label="รายละเอียด" (click)="clickEvent(i)">{{db.description}}
+                    </td>
+                    <td id="toggle{{i}}" data-label="จำนวนเงิน" [ngClass]="check(i)" (click)="clickEvent(i)">
+                        {{db.price}}</td>
+                    <td id="toggle{{i}}" data-label="สร้างวันที่" [ngClass]="check(i)" (click)="clickEvent(i)">
+                        {{db.created |date: 'dd-MM-yyyy'}}</td>
+                    <td id="toggle{{i}}" data-label="อัพเดทวันที่" [ngClass]="check(i)" (click)="clickEvent(i)">
+                        {{db.updated  |date: 'dd-MM-yyyy'}}</td>
+                    <td id="toggle{{i}}" data-label="ตั้งต่า" [ngClass]="check(i)">
+                        <button (click)="edit(db.id)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                        <button (click)="delete(db.id)"><i class="fa fa-times"aria-hidden="true"></i></button>
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+</main>

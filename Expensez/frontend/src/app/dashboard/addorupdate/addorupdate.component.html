@@ -1,0 +1,25 @@
+<app-dashboard></app-dashboard>
+<main>
+    <div class="container jumbotron" style="margin-top: 1%;float: left;margin-left: 3%;">
+        <div class="form-group">
+            <div class="form-group form-inline">
+                <b style="margin-right: 1%">Choose Category </b>
+                <select #selectcate class="form-control" [ngModel]="selectCate" (ngModelChange)="select($event)">
+                    <option *ngFor="let category of categoryAll" [ngStyle]="{background:category.color}" [disabled]="category.name_category == 'All'"
+                        [value]="category.id">{{category.name_category}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Description" class="form-control" [(ngModel)]="description">
+            </div>
+            <div class="form-group">
+                <input type="number" placeholder="Price" class="form-control" [(ngModel)]="price" required
+                    #priceCon="ngModel">
+            </div>
+            <div>
+                <input [disabled]="priceCon.errors" type="submit" value="Add Expense" class="btn btn-success"
+                    (click)="save()">
+            </div>
+        </div>
+    </div>
+</main>

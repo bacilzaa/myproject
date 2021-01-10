@@ -1,0 +1,56 @@
+<nav class="nav-bar fix-posi">
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <a class="logome" routerLink="">
+        <img class="logo-svg" src="../assets/image/expensez_logo.svg">
+        <label class="logo-text">Expensez</label>
+    </a>
+    <ul class="nav-list">
+
+        <li class="nav-item side" routerLinkActive="active">
+            <a class="nav-text" routerLink="/category" routerLinkActive="active"><i class="fa fa-book"></i>category</a>
+        </li>
+        <li class="nav-item side" routerLinkActive="active">
+            <a class="nav-text" routerLink="/expense" routerLinkActive="active"><i class="fa fa-plus-circle"></i>expense</a>
+        </li>
+        <li class="nav-item side" routerLinkActive="active">
+            <a class="nav-text" routerLink="/display" routerLinkActive="active"><i class="fa fa-pie-chart"></i>Display</a>
+        </li>
+
+        <li class="nav-item username">
+            <a class="nav-text">{{username}}</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-text" routerLink="/login" (click)="logout()">Sign out</a>
+        </li>
+    </ul>
+
+</nav>
+
+<nav class="sidebar fix-posi ">
+    <ul class="side-list">
+        <li class="side-item" routerLinkActive="active">
+            <a class="side-text" routerLink="/category" routerLinkActive="active">
+                <i class="fa fa-book"></i>
+                category
+            </a>
+        </li>
+        <li class="side-item" routerLinkActive="active">
+            <a class="side-text" routerLink="/expense" routerLinkActive="active">
+                <i class="fa fa-plus-circle"></i>
+                expense
+            </a>
+        </li>
+        <li class="side-item" routerLinkActive="active">
+            <a class="side-text" routerLink="/display" routerLinkActive="active">
+                <i class="fa fa-pie-chart"></i>
+                Display
+            </a>
+        </li>
+    </ul>
+
+
+
+</nav>
